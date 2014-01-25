@@ -27,6 +27,6 @@ def smartpca_batch(directory):
     ''' Run smartpca on every .par file in the directory, then
     	run twstats on each resulting .eval file.'''
 
-	subprocess.call('for f in %s*.par; do smartpca -p $f; done') % directory
-	subprocess.call('for f in %s*.eval; do twstats -t twtable -i $f -o $f.twstats; done') % directory
+    subprocess.call('for f in %s*.par; do smartpca -p $f; done') % directory
+    subprocess.call('for f in %s*.eval; do twstats -t twtable -i $f -o $f.twstats; done') % directory
 
